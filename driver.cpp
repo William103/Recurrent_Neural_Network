@@ -1,0 +1,5 @@
+#include "RNN.h"
+
+int main() {
+    return 0;
+}
