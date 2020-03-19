@@ -12,7 +12,8 @@ RNN::RNN(double (*f_activation_h)(double), double (*f_activation_y)(double),
     h = new double[h_size];
     std::memset(h, 0, sizeof(double) * h_size);
     XtH = random_matrix(h_size, input_size);
-    HtH = random_matrix(h_size, h_size);
+    htH = random_matrix(h_size, h_size);
+    HtY = random_matrix(h_size, output_size);
     bh = new double[h_size];
     by = new double[output_size];
     for (int i = 0; i < h_size; i++) {
@@ -21,6 +22,7 @@ RNN::RNN(double (*f_activation_h)(double), double (*f_activation_y)(double),
     for (int i = 0; i < output_size; i++) {
         by[i] = (std::rand() / (double) RAND_MAX) * 2 - 1;
     }
+    batch = 0;
 }
 
 RNN::~RNN() {
@@ -31,15 +33,21 @@ RNN::~RNN() {
 
 double* RNN::prop(double *x) {
     double *wx = XtH * x;
-    double *wh = HtH * h;
+    double *wh = htH * h;
     double *y = new double[output_size];
+    double *hy;
     for (int i = 0; i < h_size; i++) {
         h[i] = f_activation_h(wx[i] + wh[i] + bh[i]);
     }
+    hy = HtY * h;
     for (int i = 0; i < output_size; i++) {
-        y[i] = f_activation_y(h[i] + by[i]);
+        y[i] = f_activation_y(hy[i] + by[i]);
     }
     delete[] wx;
     delete[] wh;
     return y;
+}
+
+double RNN::back_prop() {
+    dE/dw = dC * dsy * h * dsh * (x + h_{t-1} * dh_{t-1}/dw)
 }

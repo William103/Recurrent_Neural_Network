@@ -23,9 +23,7 @@ class Matrix {
 
         void pretty_print();
 
-    // TODO: check syntax for friendly classes
     private:
-        //friend Matrix;
         int n, m;
         double *data;
 };

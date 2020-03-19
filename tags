@@ -1,0 +1,58 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CXX	./Makefile	/^CXX=g++$/;"	m
+CXXFLAGS	./Makefile	/^CXXFLAGS=-g$/;"	m
+HtY	./RNN.h	/^        Matrix HtY;$/;"	m	class:RNN
+INDEX	./matrix.cpp	9;"	d	file:
+LIBS	./Makefile	/^LIBS=$/;"	m
+MATRIX_H	./matrix.h	2;"	d
+MAX	./matrix.cpp	8;"	d	file:
+Matrix	./matrix.cpp	/^Matrix::Matrix() {}$/;"	f	class:Matrix
+Matrix	./matrix.cpp	/^Matrix::Matrix(const Matrix &other) {$/;"	f	class:Matrix
+Matrix	./matrix.cpp	/^Matrix::Matrix(int n, int m) : n(n), m(m) {$/;"	f	class:Matrix
+Matrix	./matrix.cpp	/^Matrix::Matrix(int n, int m, double *data) : n(n), m(m) {$/;"	f	class:Matrix
+Matrix	./matrix.h	/^class Matrix {$/;"	c
+OFILES	./Makefile	/^OFILES=matrix.o RNN.o$/;"	m
+RNN	./RNN.cpp	/^RNN::RNN(double (*f_activation_h)(double), double (*f_activation_y)(double),$/;"	f	class:RNN
+RNN	./RNN.h	/^class RNN {$/;"	c
+RNN_H	./RNN.h	2;"	d
+TARGET	./Makefile	/^TARGET=driver$/;"	m
+XtH	./RNN.h	/^        Matrix XtH;$/;"	m	class:RNN
+batch	./RNN.h	/^        int batch;$/;"	m	class:RNN
+batch_size	./RNN.h	/^        int batch_size;$/;"	m	class:RNN
+bh	./RNN.h	/^        double *bh;$/;"	m	class:RNN
+by	./RNN.h	/^        double *by;$/;"	m	class:RNN
+d_f_activation_h	./RNN.h	/^        double (*d_f_activation_h)(double);$/;"	m	class:RNN
+d_f_activation_y	./RNN.h	/^        double (*d_f_activation_y)(double);$/;"	m	class:RNN
+d_relu	./utils.h	/^double d_relu(double x) {$/;"	f
+d_sigmoid	./utils.h	/^double d_sigmoid(double x) {$/;"	f
+d_squared_error	./utils.h	/^double d_squared_error(double y_hat, double y) {$/;"	f
+data	./matrix.h	/^        double *data;$/;"	m	class:Matrix
+f_activation_h	./RNN.h	/^        double (*f_activation_h)(double);$/;"	m	class:RNN
+f_activation_y	./RNN.h	/^        double (*f_activation_y)(double);$/;"	m	class:RNN
+h	./RNN.h	/^        double *h;$/;"	m	class:RNN
+h_size	./RNN.h	/^        int h_size;$/;"	m	class:RNN
+htH	./RNN.h	/^        Matrix htH;$/;"	m	class:RNN
+init	./matrix.cpp	/^void Matrix::init(int n, int m) {$/;"	f	class:Matrix
+init	./matrix.cpp	/^void Matrix::init(int n, int m, double *data) {$/;"	f	class:Matrix
+input_size	./RNN.h	/^        int input_size;$/;"	m	class:RNN
+m	./matrix.h	/^        int n, m;$/;"	m	class:Matrix
+main	./driver.cpp	/^int main() {$/;"	f
+n	./matrix.h	/^        int n, m;$/;"	m	class:Matrix
+operator *	./matrix.cpp	/^Matrix Matrix::operator*(Matrix &other) {$/;"	f	class:Matrix
+operator *	./matrix.cpp	/^double* Matrix::operator*(double *vec) {$/;"	f	class:Matrix
+operator []	./matrix.cpp	/^double* Matrix::operator[](int index) {$/;"	f	class:Matrix
+output_size	./RNN.h	/^        int output_size;$/;"	m	class:RNN
+pretty_print	./matrix.cpp	/^void Matrix::pretty_print() {$/;"	f	class:Matrix
+prop	./RNN.cpp	/^double* RNN::prop(double *x) {$/;"	f	class:RNN
+random_matrix	./matrix.cpp	/^Matrix random_matrix(int n, int m) {$/;"	f
+relu	./utils.h	/^double relu(double x) {$/;"	f
+sigmoid	./utils.h	/^double sigmoid(double x) {$/;"	f
+squared_error	./utils.h	/^double squared_error(double y_hat, double y) {$/;"	f
+training_rate	./RNN.h	/^        double training_rate;$/;"	m	class:RNN
+~Matrix	./matrix.cpp	/^Matrix::~Matrix() {$/;"	f	class:Matrix
+~RNN	./RNN.cpp	/^RNN::~RNN() {$/;"	f	class:RNN

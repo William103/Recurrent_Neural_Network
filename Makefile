@@ -1,6 +1,6 @@
 TARGET=driver
 CXX=g++
-OFILES=matrix.o
+OFILES=matrix.o RNN.o
 LIBS=
 CXXFLAGS=-g
 
